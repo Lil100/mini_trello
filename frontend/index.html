@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
+    <title>Mini Trello - Premium Task Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External stylesheet for purple and baby pink theme -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Main application container -->
+    <div class="app">
+        <!-- Header section with app title and add board button -->
+        <header class="app-header">
+            <h1 class="app-title">Mini Trello</h1>
+            <div class="header-actions">
+                <div id="user-chip" class="user-chip hidden" title="Signed in user"></div>
+                <button id="login-btn" class="btn-secondary" title="Login">Login</button>
+                <button id="register-btn" class="btn-secondary" title="Create account">Register</button>
+                <button id="logout-btn" class="btn-secondary hidden" title="Logout">Logout</button>
+                <button id="add-board-btn" class="btn-primary" title="Create a new board">
+                    + Add Board
+                </button>
+            </div>
+        </header>
+        
+        <!-- Main content area displaying boards -->
+        <main class="main-content">
+            <!-- Container for all boards - dynamically populated by app.js -->
+            <div class="boards-container" id="boards-container">
+                <!-- Loading state shown while fetching data from API -->
+                <div class="loading">Loading boards...</div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal dialog for creating/editing items -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <!-- Close button for dismissing modal -->
+            <span class="close" title="Close">&times;</span>
+            <!-- Dynamic content injected by app.js -->
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- Main application JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

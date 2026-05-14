@@ -1,0 +1,66 @@
+<!--
+    Mini Trello - Setup Instructions
+    
+    QUICK START:
+    1. Start the Spring Boot backend:
+       cd backend
+       mvn spring-boot:run
+       
+    2. Start the frontend server (in a separate terminal):
+       cd frontend
+       npx serve . -p 3000
+       OR: python -m http.server 3000
+       
+    3. Open in browser:
+       http://localhost:3000
+       
+    IMPORTANT: The backend must be running on port 8080.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Trello Setup</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .info { background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .error { background: #ffebee; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; }
+        pre { background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Mini Trello - Setup Guide</h1>
+    
+    <div class="info">
+        <strong>Backend URL:</strong> http://localhost:8080/api<br>
+        <strong>Frontend URL:</strong> http://localhost:3000
+    </div>
+
+    <h2>Step 1: Start the Backend</h2>
+    <p>Open a terminal and run:</p>
+    <pre>cd backend
+mvn spring-boot:run</pre>
+    <p>You should see: <code>Started MiniTrelloApplication in X seconds</code></p>
+
+    <h2>Step 2: Start the Frontend</h2>
+    <p>Open another terminal and run:</p>
+    <pre>cd frontend
+npx serve . -p 3000</pre>
+    <p>Or if you have Python:</p>
+    <pre>cd frontend
+python -m http.server 3000</pre>
+
+    <h2>Step 3: Open the App</h2>
+    <p>Go to: <a href="http://localhost:3000">http://localhost:3000</a></p>
+
+    <div class="error">
+        <strong>Troubleshooting:</strong><br>
+        • Make sure port 8080 (backend) and 3000 (frontend) are not in use<br>
+        • If you see “Failed to fetch”, check that backend is running<br>
+        • Clear browser cache if you see stale content<br>
+        • Check browser console (F12) for detailed errors
+    </div>
+</body>
+</html>
